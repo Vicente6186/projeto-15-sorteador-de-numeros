@@ -1,0 +1,104 @@
+@import url(global.css);
+@import url(utilities.css);
+
+#container {
+    max-width: 110rem;
+    width: fit-content;
+    padding: 7.6rem 3.6rem;
+    margin-inline: auto;
+}
+
+header {
+    margin-bottom: 6rem;
+}
+
+main {    
+    display: flex;
+    gap: 10rem;
+    
+    & section:first-child {
+        max-width: 51rem;
+    }
+
+    & section:last-child {
+        max-width: 48.2rem;
+    }
+}
+
+h1 {
+    margin-block: 1.2rem 3.8rem;
+    font: var(--display-lg);
+}
+
+ul {
+    list-style: none;
+}
+
+#ul-2 {
+    margin-top: 8rem;
+    display: none;
+}
+
+#ul-1, #ul-2 {
+    & li {
+        display: flex;
+        align-items: flex-start;
+        gap: .8rem;
+    
+        & + li {
+            margin-top: 3.6rem;
+        }
+    
+        & h3 {
+            font: var(--paragraph-md);
+            color: var(--content-brand);
+            margin-bottom: .4rem;
+        }
+    }
+}
+
+form {
+    margin-top: 4rem;
+}
+
+.inputs-wrap {
+    display: flex;
+    gap: 1.2rem;
+}
+
+[type="submit"] {
+    margin-top: 4rem;
+}
+
+#result {
+    text-align: center;
+    text-transform: uppercase;
+
+    & ul {
+        margin-block: 4rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    & li {
+        padding: 1.8rem 2.2rem;
+        color: var(--content-brand);
+        font: var(--display-md);
+    }
+}
+
+@media (width < 1110px) {
+    main {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+
+    h1 {
+        font: var(--display-md);
+    }
+
+    #ul-1 { display: none; }
+    #ul-2 {display: block;}
+}
